@@ -192,20 +192,48 @@
 
 
 # List -> Exercise
-week1 = [15, 22, 18, 25, 20, 12, 17]
-week2 = [13, 19, 24, 16, 21]
+# week1 = [15, 22, 18, 25, 20, 12, 17]
+# week2 = [13, 19, 24, 16, 21]
 
-new_day = float(input("Enter the number of lemonades sold on the additional day: "))
-week2.append(new_day)
+# new_day = float(input("Enter the number of lemonades sold on the additional day: "))
+# week2.append(new_day)
 
-sales = week1 + week2
+# sales = week1 + week2
 
-profits = [day * 1.5 for day in sales]
+# profits = [day * 1.5 for day in sales]
 
-best_day = max(profits)
-worst_day = min(profits)
-total_profit = sum(profits)
+# best_day = max(profits)
+# worst_day = min(profits)
+# total_profit = sum(profits)
 
-print(f"You earned ${best_day:.2f} on your best day.")
-print(f"You earned ${worst_day:.2f} on your worst day.")
-print(f"Your total earnings over two weeks were ${total_profit:.2f}.")
+# print(f"You earned ${best_day:.2f} on your best day.")
+# print(f"You earned ${worst_day:.2f} on your worst day.")
+# print(f"Your total earnings over two weeks were ${total_profit:.2f}.")
+
+# Split And Join
+# msg ='Welcome to Python 101: Split and Join'
+# csv = 'Eric,John,Michael,Terry,Graham'
+# friends_list = ['Eric','John','Michael','Terry','Graham']
+# print(msg.split())
+# print(msg.split(','),type(msg.split(' ')))
+# print(csv.split(','))
+
+# print(str(friends_list))
+# print('-'.join(friends_list))
+# print(''.join(friends_list))
+# print(''.join(msg.split()))
+
+# Exercise -> Split And Join
+
+friends_string = "Ali, Ayşe, Mehmet, Zeynep, Can"
+friends_list = []
+
+split_names = friends_string.split(",")  
+
+for name in split_names:
+    clean_name = name.strip()  
+    friends_list.append(clean_name)
+    print(f"Eklenen: {clean_name}")
+
+print("Sonuç listesi:", friends_list)
+
