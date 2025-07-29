@@ -76,8 +76,31 @@
 
 
 # 8 -> Exercise -> User Input
-name_input = input('What is your name? : ')
-km_input = input('How many kilometers did you run? ')
-mil_input = float(km_input) * 0.621371
-print('Hello ' + name_input.capitalize())
-print('You ran ' + km_input + ' kilometers, which is equal to ' + str(mil_input) + ' miles.')
+# name_input = input('What is your name? : ')
+# km_input = input('How many kilometers did you run? ')
+# mil_input = float(km_input) * 0.621371
+# print('Hello ' + name_input.capitalize())
+# print('You ran ' + km_input + ' kilometers, which is equal to ' + str(mil_input) + ' miles.')
+
+# 9 -> Basic Arithmetic Operations
+# print('Basic Arithmetic Operations')
+
+# a=6
+# b=2
+# print('Addition : ', a + b)
+# print('Subtraction : ', a - b)
+# print('Multiplication : ', a * b)
+# print('Division (float) : ', a / b)
+# print('Division (floor) : ', a // b)
+# print('Modulus : ', a % b)
+# print('Exponent : ', a ** b)
+
+# 10 ->String-Basics / Slicing
+msg='welcome to Python 101: Strings'
+print(msg)
+print(msg.upper())
+print(msg.lower())
+print(msg.capitalize())
+print(msg.title())
+print(len(msg))
+print(msg.count('o'))
