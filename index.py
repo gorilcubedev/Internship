@@ -55,9 +55,29 @@
 
 # 6 -> Exercise
 
-item_name = "Hammer"
-item_price = 10.99
-item_quantity = 5
-total_price = item_price * item_quantity
+# item_name = "Hammer"
+# item_price = 10.99
+# item_quantity = 5
+# total_price = item_price * item_quantity
 
-print("Item Name: " + item_name + "\nItem Price: " + str(item_price) + "\nItem Quantity: " + str(item_quantity) + "\nTotal Price: $" +   str(total_price)) 
+# print("Item Name: " + item_name + "\nItem Price: " + str(item_price) + "\nItem Quantity: " + str(item_quantity) + "\nTotal Price: " +   str(total_price)) 
+
+# 7 -> User Input
+
+# print('User Input')
+# name = input('What is your name : ')
+# age = input('What is your age : ')
+# print('Hello ' + name + '!' + ' You are ' + age + ' years old.') 
+
+# num1 = input('Enter first number: ')
+# num2 = input('Enter second number: ')
+# answer = float(num1) + float(num2)
+# print('The answer is: ' + str(answer))
+
+
+# 8 -> Exercise -> User Input
+name_input = input('What is your name? : ')
+km_input = input('How many kilometers did you run? ')
+mil_input = float(km_input) * 0.621371
+print('Hello ' + name_input.capitalize())
+print('You ran ' + km_input + ' kilometers, which is equal to ' + str(mil_input) + ' miles.')
