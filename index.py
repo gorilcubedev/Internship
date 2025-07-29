@@ -192,26 +192,20 @@
 
 
 # List -> Exercise
-# Lemonade sales data
 week1 = [15, 22, 18, 25, 20, 12, 17]
 week2 = [13, 19, 24, 16, 21]
 
-# Add another day to week2 from user input
 new_day = float(input("Enter the number of lemonades sold on the additional day: "))
 week2.append(new_day)
 
-# Combine the two lists
 sales = week1 + week2
 
-# Calculate profits (each lemonade makes $1.5 profit)
 profits = [day * 1.5 for day in sales]
 
-# Find best and worst days
 best_day = max(profits)
 worst_day = min(profits)
 total_profit = sum(profits)
 
-# Print results
 print(f"You earned ${best_day:.2f} on your best day.")
 print(f"You earned ${worst_day:.2f} on your worst day.")
 print(f"Your total earnings over two weeks were ${total_profit:.2f}.")
