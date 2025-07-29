@@ -133,29 +133,85 @@
 # print(msg)
 
 
-def pit_stop_optimizer():
-    print("🏁 Welcome to the Pit Stop Timing Optimizer! 🔧\n")
+# 11 -> Exercise -> Pit Stop Optimizer - Exercise
+# def pit_stop_optimizer():
+#     print("🏁 Welcome to the Pit Stop Timing Optimizer! 🔧\n")
     
-    # Get race information from user
-    total_race_time = float(input("Enter the total race time in seconds: "))
-    num_pit_stops = int(input("How many pit stops were made? "))
-    avg_pit_duration = float(input("Enter the average pit stop duration in seconds: "))
+#     # Get race information from user
+#     total_race_time = float(input("Enter the total race time in seconds: "))
+#     num_pit_stops = int(input("How many pit stops were made? "))
+#     avg_pit_duration = float(input("Enter the average pit stop duration in seconds: "))
     
-    # Calculate total pit stop time
-    total_pit_time = num_pit_stops * avg_pit_duration
+#     # Calculate total pit stop time
+#     total_pit_time = num_pit_stops * avg_pit_duration
     
-    # Calculate percentage of race spent in pits
-    pit_percentage = (total_pit_time / total_race_time) * 100
-    pit_percentage = round(pit_percentage, 2)
+#     # Calculate percentage of race spent in pits
+#     pit_percentage = (total_pit_time / total_race_time) * 100
+#     pit_percentage = round(pit_percentage, 2)
     
-    # Display results
-    print(f"\n📊 Pit Stop Analysis Results:")
-    print(f"Total pit stop time: {total_pit_time} seconds")
-    print(f"Percentage of race time spent in pits: {pit_percentage}%")
+#     # Display results
+#     print(f"\n📊 Pit Stop Analysis Results:")
+#     print(f"Total pit stop time: {total_pit_time} seconds")
+#     print(f"Percentage of race time spent in pits: {pit_percentage}%")
     
-    # Check if pit time is too high
-    if pit_percentage > 5:
-        print("You need a new pit crew. 🛠️")
+#     # Check if pit time is too high
+#     if pit_percentage > 5:
+#         print("You need a new pit crew. 🛠️")
 
-if __name__ == "__main__":
-    pit_stop_optimizer()
+# if __name__ == "__main__":
+#     pit_stop_optimizer()
+
+# Lists
+# friends = ['John', 'Eric', 'Terry', 'Graham', 'Michael']
+# print(friends[1])
+# cars = [911,1300, 1350, 1400, 1450]
+# friends.sort()
+# print(friends)
+# friends.sort(reverse=True)
+# print(friends)
+# print(friends)
+
+# print(min(cars))
+# print(max(cars))
+# print(sum(cars))
+
+# friends.append('TerryG')
+# friends.insert(2, 'TerryG')
+# print(friends)
+# friends.pop(2)
+# friends.remove('TerryG')
+# friends.clear()
+# print(friends)
+
+# del friends[2]
+
+# Coppy List
+# new_friends = friends[:]
+# print(new_friends)
+# print(friends)
+
+
+# List -> Exercise
+# Lemonade sales data
+week1 = [15, 22, 18, 25, 20, 12, 17]
+week2 = [13, 19, 24, 16, 21]
+
+# Add another day to week2 from user input
+new_day = float(input("Enter the number of lemonades sold on the additional day: "))
+week2.append(new_day)
+
+# Combine the two lists
+sales = week1 + week2
+
+# Calculate profits (each lemonade makes $1.5 profit)
+profits = [day * 1.5 for day in sales]
+
+# Find best and worst days
+best_day = max(profits)
+worst_day = min(profits)
+total_profit = sum(profits)
+
+# Print results
+print(f"You earned ${best_day:.2f} on your best day.")
+print(f"You earned ${worst_day:.2f} on your worst day.")
+print(f"Your total earnings over two weeks were ${total_profit:.2f}.")
