@@ -225,15 +225,60 @@
 
 # Exercise -> Split And Join
 
-friends_string = "Ali, Ayşe, Mehmet, Zeynep, Can"
-friends_list = []
+# friends_string = "Ali, Ayşe, Mehmet, Zeynep, Can"
+# friends_list = []
 
-split_names = friends_string.split(",")  
+# split_names = friends_string.split(",")  
 
-for name in split_names:
-    clean_name = name.strip()  
-    friends_list.append(clean_name)
-    print(f"Eklenen: {clean_name}")
+# for name in split_names:
+#     clean_name = name.strip()  
+#     friends_list.append(clean_name)
+#     print(f"Eklenen: {clean_name}")
 
-print("Sonuç listesi:", friends_list)
+# print("Sonuç listesi:", friends_list)
 
+#Tuples - faster Lists you can't change
+# friends = ['John','Michael','Terry','Eric','Graham']
+# friends_tuple = ('John','Michael','Terry','Eric','Graham')
+# friends_set = {'John','Michael','Terry','Eric','Graham','Eric'}
+# my_friends_set = {'Reg','Loretta','Colin','Eric','Graham'}
+
+# print(friends[2:4])
+# print(friends_tuple[2:4])
+
+# print(friends_tuple)
+# print(friends)
+# print(friends_set)
+# print(friends_set.intersection(my_friends_set))
+# print(friends_set.difference(my_friends_set))
+# print(friends_set.union(my_friends_set))
+
+
+#Sets - blazingly fast unordered Lists 
+# Empty Lists
+# empty_list = []
+# empyt_list = list()
+
+#Empty Tuple
+# empty_tuple = ()
+# empty_tuple = tuple()
+
+#Empty Set
+# empty_set = {} # this is wrong, this is a dictionary
+# empty_set = set()
+
+friends = {'John','Michael','Terry','Eric','Graham'}
+my_friends = {'Reg','Loretta','Colin','John','Graham'}
+cars =['900','420','V70','911','996','V90','911','911','S','328','900']
+
+print('Eric' in friends and 'John' in friends)
+print(friends.union(my_friends)) 
+print(friends & my_friends)  # Intersection -> Scrimba Solution
+print(friends.intersection(my_friends,friends))
+print(friends.difference(my_friends)) 
+print(friends - my_friends)  # Difference -> Scrimba Solution
+print(my_friends.symmetric_difference(friends))
+print(my_friends ^ friends) # Symmetric Difference -> Scrimba Solution
+
+new_cars = set(cars)
+print(new_cars)
