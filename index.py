@@ -267,18 +267,69 @@
 # empty_set = {} # this is wrong, this is a dictionary
 # empty_set = set()
 
-friends = {'John','Michael','Terry','Eric','Graham'}
-my_friends = {'Reg','Loretta','Colin','John','Graham'}
-cars =['900','420','V70','911','996','V90','911','911','S','328','900']
+# friends = {'John','Michael','Terry','Eric','Graham'}
+# my_friends = {'Reg','Loretta','Colin','John','Graham'}
+# cars =['900','420','V70','911','996','V90','911','911','S','328','900']
 
-print('Eric' in friends and 'John' in friends)
-print(friends.union(my_friends)) 
-print(friends & my_friends)  # Intersection -> Scrimba Solution
-print(friends.intersection(my_friends,friends))
-print(friends.difference(my_friends)) 
-print(friends - my_friends)  # Difference -> Scrimba Solution
-print(my_friends.symmetric_difference(friends))
-print(my_friends ^ friends) # Symmetric Difference -> Scrimba Solution
+# print('Eric' in friends and 'John' in friends)
+# print(friends.union(my_friends)) 
+# print(friends & my_friends)  # Intersection -> Scrimba Solution
+# print(friends.intersection(my_friends,friends))
+# print(friends.difference(my_friends)) 
+# print(friends - my_friends)  # Difference -> Scrimba Solution
+# print(my_friends.symmetric_difference(friends))
+# print(my_friends ^ friends) # Symmetric Difference -> Scrimba Solution
 
-new_cars = set(cars)
-print(new_cars)
+# new_cars = set(cars)
+# print(new_cars)
+
+
+# Comments
+# print('This is a comment')  
+# This is a comment
+# more comments
+# Multi-line comment
+# '''
+# # This is a multi-line comment
+# # You can write multiple lines here.  
+# # This is useful for documentation or explanations.
+# # '''
+
+# name = "Default"
+# name = input('Enter your silly name: ')
+# print("Thank you " + name + "!")
+# print("for applying to")
+# print("the Minstry of Silly Walks") 
+
+# Functions
+# def greeting(param):
+#     print("Hello, " + param +  " welcome to Python 101!")
+
+# greeting("Berk")
+
+# def add_numbers(num1, num2):
+#     return num1 + num2
+
+# result = add_numbers(5, 10)
+# print("The result of the addition is: " + str(result))
+
+
+# Function - Exercise
+# 1. Add new print statement - on a new line
+#    which says 'We hear you like the color xxx! xxx is a string with color 
+# 2. extend the function with another  input parameter 'color', that defaults to 'red'
+# 3. Capture the color via an input box as variable:color 
+# 4. Change the 'You are xx!' text to say 'you will be xx+1 years old next birthday 
+#  adding 1 to the age
+# 5. Capitalize first letter of the 'name', and rest are small caps 
+# 6. Favorite color should be in lowercase 
+
+def greeting(name, age=24, color = 'red'):
+    print('Hello '  +  name.capitalize() + ', you will be ' + str(age+1) +' next birthday!')
+    print(f'Hello {name.capitalize()}, you will be {age+1} next birthday!')
+    print(f'We hear you like the color {color.lower()}!')
+
+name = input('Enter your name: ')
+age = input('Enter your age: ')
+color = input('Enter favorite color: ')
+greeting(name, int(age), color)
