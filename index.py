@@ -379,38 +379,108 @@
 #    - Travel time (hours)
 #    - Total fuel cost
 
-distance = 225000000  # km
+# distance = 225000000  # km
 
-fuel_per_km = 0.3     # liters per km
-fuel_price = 1.8      # dollars per liter
+# fuel_per_km = 0.3     # liters per km
+# fuel_price = 1.8      # dollars per liter
 
-print("🪐 MARS MISSION REPORTS 🪐\n")
+# print("🪐 MARS MISSION REPORTS 🪐\n")
 
 # Mission 1: Pathfinder
-speed1 = 40000
-time1 = distance / speed1
-cost1 = distance * fuel_per_km * fuel_price
+# speed1 = 40000
+# time1 = distance / speed1
+# cost1 = distance * fuel_per_km * fuel_price
 
-print("🚀 Pathfinder:")
-print(f"   Time: {round(time1)} hours")
-print(f"   Cost: ${cost1:,.0f}")
-print()
+# print("🚀 Pathfinder:")
+# print(f"   Time: {round(time1)} hours")
+# print(f"   Cost: ${cost1:,.0f}")
+# print()
 
 # Mission 2: Perseverance  
-speed2 = 75000
-time2 = distance / speed2
-cost2 = distance * fuel_per_km * fuel_price
+# speed2 = 75000
+# time2 = distance / speed2
+# cost2 = distance * fuel_per_km * fuel_price
 
-print("🚀 Perseverance:")
-print(f"   Time: {round(time2)} hours") 
-print(f"   Cost: ${cost2:,.0f}")
-print()
+# print("🚀 Perseverance:")
+# print(f"   Time: {round(time2)} hours") 
+# print(f"   Cost: ${cost2:,.0f}")
+# print()
 
 # Mission 3: Starship
-speed3 = 120000
-time3 = distance / speed3
-cost3 = distance * fuel_per_km * fuel_price
+# speed3 = 120000
+# time3 = distance / speed3
+# cost3 = distance * fuel_per_km * fuel_price
 
-print("🚀 Starship:")
-print(f"   Time: {round(time3)} hours")
-print(f"   Cost: ${cost3:,.0f}")
+# print("🚀 Starship:")
+# print(f"   Time: {round(time3)} hours")
+# print(f"   Cost: ${cost3:,.0f}")
+
+# Comparisons and Booleans
+# a = 7
+# b = 3 
+# print(a == b)
+# print(a != b)
+# print(a > b)
+# print(a < b)
+# print(a >= b)
+# print(a <= b)
+# print('o in John is ','o' in 'John') #membership
+# print('o in John is ','o' not in 'John') #non membership
+# print('John is John ','John' is 'John') #identity
+
+# Boolean Operators
+# print(a == 7 and b == 3)  # True
+# print(a == 7 or b == 3)   # True
+# print(not a == 7)         # False
+
+# Boolean Expressions
+# is_raining = False
+# is_sunny = True
+# is_weekend = True
+
+# print(bool('Parrot')) # True
+# print(bool(1)) # True
+# print(bool(0)) # False
+# print(bool([])) # False
+# print(bool([1, 2, 3])) # True
+
+# print(42 + True) # 43
+# print(42 + False) # 42
+
+# Conditional Statements -> If, Elif, Else
+
+# is_raining = False
+# is_cold = True
+# print("Good Morning!")
+# if is_raining or is_cold:
+#     print("Don't forget your umbrella or jacket or both!")
+# elif is_raining and not is_cold:
+#     print("Don't forget your umbrella!")
+# else:
+#     print("Umbrella optional!")
+
+# amount = 51
+# if amount <= 50:
+#     print("You can buy a small item.")
+# else:
+#     print("Please enter your PIN")
+
+
+#! If/ELIF/ELSE - Exercise 
+mode = input("Enter math mode (+,-,*,/): ")
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+if mode == '+':
+    print(num1 + num2)
+elif mode == '-':
+    print(num1 - num2)
+elif mode == '*':
+    print(num1 * num2)
+elif mode == '/':
+    if num2 != 0:
+        print(num1 / num2)
+    else:
+        print("Division by zero is not allowed.")
+else:
+    print("Invalid math mode.")
