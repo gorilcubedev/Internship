@@ -651,17 +651,106 @@
 #     print(f"{capitalized_name},You are invited to the party on Saturday.\n")
 
 
-# Phone Numbe Formatter - Exercise
+#! Phone Numbe Formatter - Exercise
+# phone_input = input("Enter U.S phone number in any format: ").strip()
 
-phone_input = input("Enter U.S phone number in any format: ").strip()
+# for char in ['-','(',')','.']:
+#     phone_input = phone_input.replace(char, ' ')
 
-for char in ['-','(',')','.']:
-    phone_input = phone_input.replace(char, ' ')
+# digits = ''.join(phone_input.split())
 
-digits = ''.join(phone_input.split())
+# if len(digits) == 10 and digits.isdigit():
+#     formatted_number = f"({digits[:3]}) {digits[3:6]}-{digits[6:]}"
+#     print(formatted_number)
+# else:
+#     print("Please enter exactly 10 digits.")
 
-if len(digits) == 10 and digits.isdigit():
-    formatted_number = f"({digits[:3]}) {digits[3:6]}-{digits[6:]}"
-    print(formatted_number)
-else:
-    print("Please enter exactly 10 digits.")
+#! Scrimba Solution
+
+# phone_input = input("Enter a U.S. phone number (any format): ")
+
+# cleaned = phone_input.strip()
+
+# for ch in ["-", "(", ")", "."]:
+#     cleaned = cleaned.replace(ch, " ")
+    
+# parts = cleaned.split()
+# digits_only = "".join(parts)
+
+# if len(digits_only) == 10:
+#     area = digits_only[0:3]
+#     mid = digits_only[3:6]
+#     end = digits_only[6:]
+#     print(f"Formatted number: ({area}) {mid}-{end}")
+# else:
+#     print("Error: Please enter exactly 10 digits.")
+    
+# Enumerate
+
+# print('python101 - Enumerate')
+# friends = ['Brian', 'Judith', 'Reg', 'Loretta', 'Colin']
+# efriends = [(51,'Brian'), (52,'Judith'), (53,'Reg'), (54,'Loretta'), (55,'Colin')]
+
+
+# i = 1
+# for friend in friends:
+#     print(i,friend)
+#     i = i + 1 # or i += 1
+
+# for num,friend in enumerate(friends,51):
+#     print(num,friend)
+
+# print(type(enumerate(friends)))
+# print(list(enumerate(friends)))
+
+# Sort() and Sorted()
+# my_list = [1,5,3,7,2]
+# my_dict = {'car':4,'dog':2,'add':3,'bee':1}
+# my_tuple = ('d','c','e','a','b')
+# my_string = 'python'
+
+# print(my_list,'original')
+# print(sorted(my_list))
+# print(my_list,'new')
+# my_list1 =sorted(my_list)
+# print(my_list1)
+# print(list(reversed(my_list)))
+# print(my_list[::-1]) # Reverse the list
+
+# Access Control Scanner 
+
+revoked_badges = {'R100', 'R200', 'R300', 'X404', 'X505'}
+
+approved = []
+denied = []
+
+while True:
+    name = input("\nEnter visitor's name (or 'done' to finish): ").strip()
+    
+    if name.lower() == 'done':
+        break
+    
+    badge = input(f"Enter {name}'s badge number: ").strip()
+    
+    if badge in revoked_badges:
+        denied.append(name)
+        print(f"ACCESS DENIED for {name} (badge {badge})")
+    else:
+        approved.append(name)
+        print(f"ACCESS GRANTED for {name}")
+
+print("\n=== Access Summary ===")
+
+# Approved 
+print("\n✅ Approved Visitors:")
+approved_sorted = sorted(approved)
+for visitor in approved_sorted:
+    print(f"- {visitor}")
+print(f"Total: {len(approved_sorted)}")
+
+# Denied 
+print("\n⛔️ Denied Visitors:")
+denied_sorted = sorted(denied)
+for visitor in denied_sorted:
+    print(f"- {visitor}")
+print(f"Total: {len(denied_sorted)}")
