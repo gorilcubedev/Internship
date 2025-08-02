@@ -592,29 +592,66 @@
 
 
 # Coffee Shop Order System - Exercise
-total_price = 0.0
-drink_count = 0
+# total_price = 0.0
+# drink_count = 0
 
-while True:
-    name = input("Customer name (type 'done' to finish): ")
+# while True:
+#     name = input("Customer name (type 'done' to finish): ")
 
-    if name.lower() == "done":
-        break
+#     if name.lower() == "done":
+#         break
 
-    drink = input("What would you like to order (latte, americano, espresso)? ").lower()
+#     drink = input("What would you like to order (latte, americano, espresso)? ").lower()
 
-    if drink == "latte":
-        total_price += 3.50
-        drink_count += 1
-    elif drink == "americano":
-        total_price += 3.00
-        drink_count += 1
-    elif drink == "espresso":
-        total_price += 2.50
-        drink_count += 1
-    else:
-        print("⚠️ Sorry, we don't serve that drink.")
-        continue
+#     if drink == "latte":
+#         total_price += 3.50
+#         drink_count += 1
+#     elif drink == "americano":
+#         total_price += 3.00
+#         drink_count += 1
+#     elif drink == "espresso":
+#         total_price += 2.50
+#         drink_count += 1
+#     else:
+#         print("⚠️ Sorry, we don't serve that drink.")
+#         continue
 
-print(f"\nTotal drinks ordered: {drink_count}")
-print(f"Total price: ${total_price:.2f}")
+# print(f"\nTotal drinks ordered: {drink_count}")
+# print(f"Total price: ${total_price:.2f}")
+
+# For Loops and Nesting
+# for furgle in 'Norwegian blue':
+#     print(furgle)
+
+# for furgle in range(2,8):
+#     print(furgle)
+
+# for furgle in range(1,15,3):
+#     print(furgle)
+
+# for name in range ['John','Terry','Eric','Michael','George']:
+#     print(name)
+
+# friends = ['John','Terry','Eric','Michael','George']
+# for friend in friends:
+#     print(friend)
+ 
+# For - Exercise
+
+# Initial lists of names
+names = ['aySE','fAtMa','kUZEy']
+names1 = ['bERk', 'eMİR']
+
+# Get two additional names from user input
+extra_name1 = input("Enter first additional guest name: ").strip().capitalize()
+extra_name2 = input("Enter second additional guest name: ").strip().capitalize()
+
+# Combine all names into one list
+all_names = names + names1 + [extra_name1, extra_name2]
+
+# Print invitations for each friend
+for name in all_names:
+    # Capitalize the name properly (in case it wasn't already)
+    capitalized_name = name.capitalize()
+    print(f"{capitalized_name},You are invited to the party on Saturday.\n")
+
