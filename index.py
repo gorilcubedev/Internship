@@ -574,18 +574,48 @@
 
 # While Loop - Exercise
 
-num = 12
-guess = 0
-guess_limit = 3 
-guess_number = 0
+# num = 12
+# guess = 0
+# guess_limit = 3 
+# guess_number = 0
 
-while guess < guess_limit:
-    guess_number = int(input("Guess the number: "))
-    if guess_number == num:
-        print("Congratulations! You guessed the number.")
+# while guess < guess_limit:
+#     guess_number = int(input("Guess the number: "))
+#     if guess_number == num:
+#         print("Congratulations! You guessed the number.")
+#         break
+#     else:
+#         print("Wrong guess, try again!")
+#         guess += 1 
+# if guess == guess_limit:
+#     print("Sorry, you've used all your guesses. The number was:", num)
+
+
+# Coffee Shop Order System - Exercise
+total_price = 0.0
+drink_count = 0
+
+while True:
+    name = input("Customer name (type 'done' to finish): ")
+
+    if name.lower() == "done":
         break
+
+    drink = input("What would you like to order (latte, americano, espresso)? ").lower()
+
+    if drink == "latte":
+        total_price += 3.50
+        drink_count += 1
+    elif drink == "americano":
+        total_price += 3.00
+        drink_count += 1
+    elif drink == "espresso":
+        total_price += 2.50
+        drink_count += 1
     else:
-        print("Wrong guess, try again!")
-        guess += 1 
-if guess == guess_limit:
-    print("Sorry, you've used all your guesses. The number was:", num)
+        print("⚠️ Sorry, we don't serve that drink.")
+        continue
+
+# 8. After the loop, print total number of drinks and total price
+print(f"\nTotal drinks ordered: {drink_count}")
+print(f"Total price: ${total_price:.2f}")
