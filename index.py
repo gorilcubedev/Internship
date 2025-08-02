@@ -951,3 +951,29 @@
 # print("\n-- Final roster --")
 # for seat, info in bus.items():
 #   print(f"Seat {seat}: {info['name']} (drop-off {info['dropoff']})")
+
+# Dict - Exercise v1.0
+freelancers = {'name':'freelancing Shop','brian': 70, 'black knight':20, 'biccus diccus':100, 'grim reaper':500, 'minstrel':-15}
+antiques = {'name':'Antique Shop','french castle':400, 'wooden grail':3, 'scythe':150, 'catapult':75, 'german joke':5}
+pet_shop = {'name':'Pet Shop','blue parrot':10, 'white rabbit':5, 'newt': 2}
+
+cart = {}
+
+for shop in (freelancers,antiques,pet_shop):
+    print(f"\nWelcome to {shop['name']}")
+    for item, price in shop.items():
+        if item != 'name':
+            print(f"{item.title()} - ${price}")
+
+    choice = input("What would you like to buy? ").strip().lower()
+    if choice in shop and choice != 'name':
+        quantity = int(input(f"How many {choice}s would you like to buy? "))
+        cart[choice] = cart.get(choice, 0) + quantity * shop[choice]
+    else:
+        print("Item not found or invalid choice.")
+
+# Print the cart summary
+if cart:
+    print("\nYour cart summary:")
+    for item, total_price in cart.items():
+        print(f"{item.title()}: ${total_price} but today it's all free!")
