@@ -467,20 +467,125 @@
 
 
 #! If/ELIF/ELSE - Exercise 
-mode = input("Enter math mode (+,-,*,/): ")
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+# mode = input("Enter math mode (+,-,*,/): ")
+# num1 = float(input("Enter first number: "))
+# num2 = float(input("Enter second number: "))
 
-if mode == '+':
-    print(num1 + num2)
-elif mode == '-':
-    print(num1 - num2)
-elif mode == '*':
-    print(num1 * num2)
-elif mode == '/':
-    if num2 != 0:
-        print(num1 / num2)
+# if mode == '+':
+#     print(num1 + num2)
+# elif mode == '-':
+#     print(num1 - num2)
+# elif mode == '*':
+#     print(num1 * num2)
+# elif mode == '/':
+#     if num2 != 0:
+#         print(num1 / num2)
+#     else:
+#         print("Division by zero is not allowed.")
+# else:
+#     print("Invalid math mode.")
+
+# Scrimba Solution
+# Create a calculator which handles +,-,*,/ and outputs answer based on the mode/ operator used
+# Hint: use 3 separate inputs 
+# Bonus: Extend functionality with extra mode so it also does celsius to fahrenheit conversion
+# formula is: temp in C*9/5 + 32 = temp in f
+# mode = input('Enter math operation(+,-,*,/) or f for Celsius to Fahrenheit conversion: ')
+# num1 = float(input('Enter first number: '))
+# if mode.lower() == 'f':
+#     print(f'{num1} Celsius is equivalent to {(num1*9/5)+32 } fahrenheit')
+# else:
+#     num2 = float(input('Enter second number: '))
+
+#     if mode == '+':
+#         print(f'Answer is: {num1 + num2}')
+#     elif mode == '-':
+#         print(f'Answer is: {num1 - num2}')
+#     elif mode == '*':
+#         print(f'Answer is: {num1 * num2}')
+#     elif mode == '/':
+#         print(f'Answer is: {num1 / num2}')
+#     else:
+#         print('Input error!')
+
+
+# def num_days(month):
+
+#     if month == 'jan':
+#         print('number of days in',month,'is',31)
+#     elif month == 'feb':
+#         print('number of days in',month,'is',28)
+#     elif month == 'mar':
+#         print('number of days in',month,'is',31)
+#     elif month == 'apr':
+#         print('number of days in',month,'is',30)
+#     elif month == 'may':
+#         print('number of days in',month,'is',31)
+#     elif month == 'jun':
+#         print('number of days in',month,'is',30)
+#     elif month == 'jul':
+#         print('number of days in',month,'is',31)
+#     elif month == 'aug':
+#         print('number of days in',month,'is',31)
+#     elif month == 'sep':
+#         print('number of days in',month,'is',30)
+#     elif month == 'oct':
+#         print('number of days in',month,'is',31)
+#     elif month == 'nov':
+#         print('number of days in',month,'is',30)
+#     elif month == 'dec':
+#         print('number of days in',month,'is',31)
+
+#! optimize/shorten the code in the function
+#! try to reduce the number of conditionals 
+# def num_days(month):
+#     if month == 'jan' or month == 'mar' or month == 'may' or month == 'jul' or month == 'aug' or month == 'oct' or month == 'dec':
+#         print('number of days in',month,'is',31)
+#     elif month == 'feb':
+#         print('number of days in',month,'is',28)
+#     else:
+#         print('number of days in',month,'is',30)
+        
+# num_days('feb')
+
+
+#! While Loops
+
+# print("1.*Loops are great*")
+# print("2.**Loops are great**")
+# print("3.***Loops are great***")
+# print("4.****Loops are great****")
+# print("5.*****Loops are great*****")
+
+# while condition:
+#     code
+#     iterator
+
+# i=0
+# while i < 5:
+#     print("Loops are awesome")
+#     i=i+1
+
+
+# i=0
+# while i < 5:
+#     print(f"{i}."+ "*"*i + "Loops are awesome" + "*"*i)
+#     i=i+1 # i += 1 aynı ifade
+
+# While Loop - Exercise
+
+num = 12
+guess = 0
+guess_limit = 3 
+guess_number = 0
+
+while guess < guess_limit:
+    guess_number = int(input("Guess the number: "))
+    if guess_number == num:
+        print("Congratulations! You guessed the number.")
+        break
     else:
-        print("Division by zero is not allowed.")
-else:
-    print("Invalid math mode.")
+        print("Wrong guess, try again!")
+        guess += 1 
+if guess == guess_limit:
+    print("Sorry, you've used all your guesses. The number was:", num)
