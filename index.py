@@ -636,22 +636,32 @@
 # for friend in friends:
 #     print(friend)
  
-# For - Exercise
+#! For - Exercise
 
-# Initial lists of names
-names = ['aySE','fAtMa','kUZEy']
-names1 = ['bERk', 'eMİR']
+# names = ['aySE','fAtMa','kUZEy']
+# names1 = ['bERk', 'eMİR']
 
-# Get two additional names from user input
-extra_name1 = input("Enter first additional guest name: ").strip().capitalize()
-extra_name2 = input("Enter second additional guest name: ").strip().capitalize()
+# extra_name1 = input("Enter first additional guest name: ").strip().capitalize()
+# extra_name2 = input("Enter second additional guest name: ").strip().capitalize()
 
-# Combine all names into one list
-all_names = names + names1 + [extra_name1, extra_name2]
+# all_names = names + names1 + [extra_name1, extra_name2]
 
-# Print invitations for each friend
-for name in all_names:
-    # Capitalize the name properly (in case it wasn't already)
-    capitalized_name = name.capitalize()
-    print(f"{capitalized_name},You are invited to the party on Saturday.\n")
+# for name in all_names:
+#     capitalized_name = name.capitalize()
+#     print(f"{capitalized_name},You are invited to the party on Saturday.\n")
 
+
+# Phone Numbe Formatter - Exercise
+
+phone_input = input("Enter U.S phone number in any format: ").strip()
+
+for char in ['-','(',')','.']:
+    phone_input = phone_input.replace(char, ' ')
+
+digits = ''.join(phone_input.split())
+
+if len(digits) == 10 and digits.isdigit():
+    formatted_number = f"({digits[:3]}) {digits[3:6]}-{digits[6:]}"
+    print(formatted_number)
+else:
+    print("Please enter exactly 10 digits.")
