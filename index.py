@@ -616,6 +616,5 @@ while True:
         print("⚠️ Sorry, we don't serve that drink.")
         continue
 
-# 8. After the loop, print total number of drinks and total price
 print(f"\nTotal drinks ordered: {drink_count}")
 print(f"Total price: ${total_price:.2f}")
