@@ -719,38 +719,235 @@
 
 # Access Control Scanner 
 
-revoked_badges = {'R100', 'R200', 'R300', 'X404', 'X505'}
+# revoked_badges = {'R100', 'R200', 'R300', 'X404', 'X505'}
 
-approved = []
-denied = []
+# approved = []
+# denied = []
 
-while True:
-    name = input("\nEnter visitor's name (or 'done' to finish): ").strip()
+# while True:
+#     name = input("\nEnter visitor's name (or 'done' to finish): ").strip()
     
-    if name.lower() == 'done':
-        break
+#     if name.lower() == 'done':
+#         break
     
-    badge = input(f"Enter {name}'s badge number: ").strip()
+#     badge = input(f"Enter {name}'s badge number: ").strip()
     
-    if badge in revoked_badges:
-        denied.append(name)
-        print(f"ACCESS DENIED for {name} (badge {badge})")
-    else:
-        approved.append(name)
-        print(f"ACCESS GRANTED for {name}")
+#     if badge in revoked_badges:
+#         denied.append(name)
+#         print(f"ACCESS DENIED for {name} (badge {badge})")
+#     else:
+#         approved.append(name)
+#         print(f"ACCESS GRANTED for {name}")
 
-print("\n=== Access Summary ===")
+# print("\n=== Access Summary ===")
 
-# Approved 
-print("\n✅ Approved Visitors:")
-approved_sorted = sorted(approved)
-for visitor in approved_sorted:
-    print(f"- {visitor}")
-print(f"Total: {len(approved_sorted)}")
+# # Approved 
+# print("\n✅ Approved Visitors:")
+# approved_sorted = sorted(approved)
+# for visitor in approved_sorted:
+#     print(f"- {visitor}")
+# print(f"Total: {len(approved_sorted)}")
 
-# Denied 
-print("\n⛔️ Denied Visitors:")
-denied_sorted = sorted(denied)
-for visitor in denied_sorted:
-    print(f"- {visitor}")
-print(f"Total: {len(denied_sorted)}")
+# # Denied 
+# print("\n⛔️ Denied Visitors:")
+# denied_sorted = sorted(denied)
+# for visitor in denied_sorted:
+#     print(f"- {visitor}")
+# print(f"Total: {len(denied_sorted)}")
+
+
+# Loyalty Points Engine
+# Purchase history (example data - can be modified)
+# purchases = [15.99, 27.50, 8.75, 42.20, 225.95, 120.00]
+
+# def earn_points(price):
+#     return int(price) * 3  # 3 points per whole dollar
+
+# def tier_label(points):
+#     if points < 100:
+#         return "Bronze"
+#     elif 100 <= points < 500:
+#         return "Silver"
+#     else:
+#         return "Gold"
+
+# # Calculate total spending and points
+# total_spent = sum(purchases)
+# total_points = sum(earn_points(price) for price in purchases)
+# final_tier = tier_label(total_points)
+
+# # Print loyalty summary
+# print("\n=== Loyalty Summary ===")
+# print(f"• Total dollars spent: ${total_spent:.2f}")
+# print(f"• Total points earned: {total_points}")
+# print(f"• Final tier: {final_tier}")
+
+# Dictionaries
+# movie = {
+#     'title': 'The Godfather',
+#     'year': 1972,
+#     'cast': ['Marlon Brando', 'Al Pacino', 'James Caan'],
+# }
+# movie.update({'director': 'Francis Ford Coppola', 'rating': 9.2})
+# movie['title'] = 'The Godfather Part II'
+# movie['budget'] = 6000000
+# print(movie['title'])
+# del movie['year']
+# print(movie.get('year', 'Year not found'))
+
+# Dict II
+
+# python = {'John':35,'Eric':36,'Michael':35,'Terry':38,'Graham':37,'TerryG':34}
+# holy_grail = {'Arthur':40,'Galahad':35,'Lancelot':39,'Knight of NI':40, 'Zoot':17}
+# life_of_brian = {'Brian':33,'Reg':35,'Stan/Loretta':32,'Biccus Diccus':45}
+
+# Membership Test
+
+# people = {}
+# people1 = {}
+# people2 = {}
+
+# people.update(python)
+# people.update(holy_grail)
+# people.update(life_of_brian)
+# print(sorted(people))
+
+# for groups in (python,holy_grail) : people1.update(groups)
+# print(sorted(people1))
+
+# people2 = {**python, **holy_grail, **life_of_brian}
+# print(sorted(people2))
+
+# Dog Bus Tracker - Exercise
+
+# 1. Start with a bus dictionary holding current passengers.
+#    - Each seat number (1, 2, 3, ...) is a key
+#    - Each value is another dictionary with each pet's:
+#        • name
+#        • breed
+#        • pickup time
+#        • dropoff time
+#
+# 2. Print a starting roster showing each pet’s seat, name, and pickup time.
+
+# 3. Add one new pet if there’s room on the bus.  
+#    - Use MAX_SEATS to limit capacity.  
+#    - Dynamically assign the next seat number.  
+#    - Print the updated roster showing all pets after pickup.  
+
+# 4. Ask which pet leaves early.  
+#    - Remove that pet from the bus.  
+#    - Print a message saying they’ve headed home.  
+
+# 5. Print a final roster listing the remaining pets and their dropoff times.  
+
+
+# Constants
+# MAX_SEATS = 5
+
+# # Initial bus passengers
+# bus = {
+#     1: {"name": "Buddy", "breed": "Golden Retriever", "pickup": "8:00 AM", "dropoff": "4:30 PM"},
+#     2: {"name": "Luna", "breed": "Labrador", "pickup": "8:15 AM", "dropoff": "4:45 PM"},
+#     3: {"name": "Max", "breed": "Beagle", "pickup": "8:30 AM", "dropoff": "5:00 PM"}
+# }
+
+# def print_roster(bus_dict, title="Current Bus Roster"):
+#     """Print current passengers in a formatted way"""
+#     print(f"\n=== {title} ===")
+#     for seat, pet in bus_dict.items():
+#         print(f"Seat {seat}: {pet['name']} ({pet['breed']}) - Pickup: {pet['pickup']}")
+
+# # 1. Print starting roster
+# print_roster(bus, "Starting Bus Roster")
+
+# # 2. Add new pet if there's room
+# if len(bus) < MAX_SEATS:
+#     next_seat = max(bus.keys()) + 1 if bus else 1
+    
+#     print("\nNew pet boarding...")
+#     name = input("Enter pet's name: ").strip()
+#     breed = input("Enter pet's breed: ").strip()
+#     pickup = input("Enter pickup time (e.g., 9:00 AM): ").strip()
+#     dropoff = input("Enter dropoff time (e.g., 5:30 PM): ").strip()
+    
+#     bus[next_seat] = {
+#         "name": name,
+#         "breed": breed,
+#         "pickup": pickup,
+#         "dropoff": dropoff
+#     }
+    
+#     print_roster(bus, "Updated Bus Roster After Pickup")
+# else:
+#     print("\nBus is at full capacity - cannot accept more pets.")
+
+# # 3. Remove a pet
+# if bus:
+#     print("\nEarly dropoff...")
+#     print_roster(bus, "Current Passengers")
+#     seat_to_remove = int(input("Enter seat number of pet leaving early: "))
+    
+#     if seat_to_remove in bus:
+#         leaving_pet = bus.pop(seat_to_remove)
+#         print(f"\n{leaving_pet['name']} has headed home early!")
+#     else:
+#         print("Invalid seat number - no pet removed.")
+
+# # 4. Print final roster
+# if bus:
+#     print("\n=== Final Bus Roster ===")
+#     for seat, pet in bus.items():
+#         print(f"Seat {seat}: {pet['name']} - Dropoff: {pet['dropoff']}")
+# else:
+#     print("\nBus is now empty - all pets have been dropped off.")
+
+# Scrimba Solution
+# MAX_SEATS = 8
+
+# bus = {
+#   1: {"name": "Milo", "breed": "Labrador", "pickup": "8:00 AM", "dropoff": "4:00 PM"},
+#   2: {"name": "Otis", "breed": "French Bulldog", "pickup": "8:15 AM", "dropoff": "4:15 PM"},
+#   3: {"name": "Willow", "breed": "Border Collie", "pickup": "8:30 AM", "dropoff": "4:30 PM"},
+# }
+
+# print("-- Starting roster --")
+# for seat, info in bus.items():
+#   print(f"Seat {seat}: {info['name']} (pickup {info['pickup']})")
+
+# if len(bus) < MAX_SEATS:
+#   seat_num = len(bus) + 1
+#   new_pet = {
+#     "name": "Sir Barks-a-Lot",
+#     "breed": "Corgi Knight",
+#     "pickup": "8:45 AM",
+#     "dropoff": "4:45 PM",
+#   }
+#   bus[seat_num] = new_pet
+#   print(f"\n👋  {new_pet['name']} boards (seat {seat_num}).")
+# else:
+#   print("\n🚫  No free seats.")
+
+# print("\n-- Roster after pickup --")
+# for seat, info in bus.items():
+#   print(f"Seat {seat}: {info['name']}")
+
+
+# remove_name = input("\nWho goes home early? ").strip().lower()
+
+# seat_to_remove = 0
+# for seat, info in bus.items():
+#   if info['name'].lower() == remove_name:
+#     seat_to_remove = seat
+#     break
+
+# if seat_to_remove:
+#   gone = bus.pop(seat_to_remove)
+#   print(f"\n👋  {gone['name']} (seat {seat_to_remove}) heads home early.")
+# else:
+#   print(f"\n⚠️  No passenger name '{remove_name}' on the bus.")
+
+
+# print("\n-- Final roster --")
+# for seat, info in bus.items():
+#   print(f"Seat {seat}: {info['name']} (drop-off {info['dropoff']})")
